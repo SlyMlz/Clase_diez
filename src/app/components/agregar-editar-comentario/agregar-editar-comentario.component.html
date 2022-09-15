@@ -1,0 +1,19 @@
+<p>Agregar Comentarios</p>
+<form [formGroup]="agregarComentarios" (ngSubmit)="agregar()">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Titulo</label>
+        <input type="text" class="form-control" id="titulo" >
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"> Autor</label>
+        <input type="text" class="form-control" id="autor" >
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Comentario</label>
+        <textarea type="text" class="form-control" id="texto" rows="10"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary float-end">Agregar</button>
+    <button routerLink="/" class="btn btn-secondary">Regresar</button>
+</form>

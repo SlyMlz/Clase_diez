@@ -1,0 +1,42 @@
+<div class="row mt3">
+   
+    
+    <div class="col lg6">
+        <br><br>
+        <button class="btn btn-primary" float end routerLink="/add">Agregar integrante</button>
+    </div>
+
+</div>
+
+<table *ngIf="listComentarios.length>0" class="table table-hover mt-3">
+    <thead>
+        <tr>
+            <td>Titulo</td>
+            <td>Autor</td>
+            <td>Fecha</td>
+            <td>Opciones</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let coment of listComentarios">
+            <td>{{coment.titulo}}</td>
+            <td>{{coment.autor}}</td>
+            <td>{{coment.fechaCreacion | date:'dd/mm/yy'}}</td>
+            
+            <td style="width: 5%;">
+                <button class="btn btn-primary btn-sm float-end">Editar</button>
+            </td>
+            <td style="width: 5%;">
+                <button class="btn btn-danger btn-sm float-end">Eliminar</button>
+            </td>
+        </tr>
+        
+    </tbody>
+</table>
+
+
+<!--Directiva-->
+<div *ngIf="listComentarios.length==0" class="row mt5">
+    <h5>No hay ningun comentario registrado</h5>
+</div>

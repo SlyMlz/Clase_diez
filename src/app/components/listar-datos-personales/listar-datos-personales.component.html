@@ -1,0 +1,41 @@
+<div class="row mt3">
+   
+    
+    <div class="col lg6">
+        <br><br>
+        <button class="btn btn-primary" float end routerlink="/add">Agregar persona</button>
+    </div>
+
+</div>
+
+<table class="table table-hover mt-3">
+    <thead>
+        <tr>
+            <td>Identificación</td>
+            <td>Nombre</td>
+            <td>Apellido</td>
+            <td>Dirección</td>
+            <td>Email</td>
+            <td>Telefono</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let coment of listDatos">
+            <td>{{coment.identificacion}}</td>
+            <td>{{coment.nombre}}</td>
+            <td>{{coment.apellido}}</td>
+            <td>{{coment.direccion}}</td>
+            <td>{{coment.email}}</td>
+            <td>{{coment.telefono}}</td>
+        </tr>
+        
+    </tbody>
+</table>
+
+
+<!--Directiva-->
+<div *ngIf="listDatos.length==0" class="row mt5">
+    <h5>No hay ningun comentario registrado</h5>
+</div>
